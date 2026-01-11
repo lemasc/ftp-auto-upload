@@ -3,6 +3,9 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "compile": "bun build --compile --minify --sourcemap --bytecode index.ts --outfile ftp-watcher"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
