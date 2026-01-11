@@ -24,7 +24,7 @@ class FTPFileWatcher {
     }
     constructor(watchFolder: string) {
         this.watchFolder = path.resolve(watchFolder);
-        this.uploadedFilesPath = path.join(__dirname, 'uploaded-files.json');
+        this.uploadedFilesPath = path.join(process.cwd(), 'uploaded-files.json');
         this.uploadedFiles = this.loadUploadedFiles();
         this.ftpConfig = {
             host: process.env.FTP_HOST ?? "",
